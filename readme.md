@@ -1,7 +1,6 @@
 # Gothy - Game
 https://github.com/mpagon25/gothy-game
 
-
 ## Description
 Side scroll platformer with a bat as a protagonist who's goal it is to reach its cave.
 This program/game will allow the user to maneuver a certain object through a 2D designed level and will be finished/the user wins the game when the object reaches the end of the level.
