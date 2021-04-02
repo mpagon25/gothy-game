@@ -1,5 +1,5 @@
 # Gothy - Game
-[Link Deploy](http://github.com)
+https://github.com/mpagon25/gothy-game
 
 
 ## Description
@@ -19,19 +19,33 @@ The user will need a keyboard to start, control and end this program/game. It's 
 
 ## MVP
 
-As a user I want to see the splash screen with a start image as I open/run/enter the site/game with a button which is actually starting the program/game.
+As a user I want to see the start screen with the start button as I enter the site and want to be able to start the game as I click on the button
+As a user I wan to be able to control and maneuver my object through the level in between the canvas
+As a user I want that the level and background move sideways in the direction the object is pointin and moving as the object hits a certain point in the canvas
 
-As a user I want to be able to:
-- control and maneuver the object
-- win by reaching the end of the level
-- lose by hitting the edges of the level or any other obstacle (not bugs)
 
-As a user I want to see the restart game screen with the last state of the game and two buttons ('restart game' and 'quit') (won|lost) as I won or lost the game.
+
+As a user I want the fame to randomly display bugs flying around (static)
+As a user I want the game to create randomly positioned platforms where my object can land on
+As a user I want a energy bar diplayed on top of the screen showing the energy of my object
+
+
+
+As a user I want my object to be able to 'eat' bugs so its energy is filling up
+As a user I want my object to lose energy everytime I use the 'fly' skill
+
+
+
+As a user I want that the game is been declared and be send to the game over screen as lost as I hit an obstacle or the top/bottom border of the level
+As a user I want the level to end at a defined certain point and declare that the level was successfully completed and display the winscreen
 
 
 ## Backlog
+As a user I want the game to create randomly positioned 'obstacles' sticking out of the top and bottom of the canvas
+As a user I want my attempts displayed as life on top of the screen
+As a user I want to lose an attempt and start the level from the beginning everytime my object hits an obstacle or the top/bottom border of the level
+As a user I want that the game is been declared and be send to the game over screen as lost as I all my attempts 
 
--splash scr
 
 
 
@@ -49,14 +63,48 @@ Definition of the different states and their transition (transition functions)
 
 
 ## Task
-Task definition in order of priority
+- create splash screen
+	- implement html and css for design and layout
+		- adding start button
+		- adding and displaying images
+
+	- implement functtionality to start the game
+		- adding function the the button to start the game
+
+- create game screen
+	- implement html and css for design and layout
+	- creating Classes
+		- create TopBotObstacle class
+		- create MainCharacter class		
+		- create Map class
+		- create Plattform class
+		- create Goal class
+		- Create EnergyBar Class
+		- Create Life Class
+		
+	- creating logic
+		- create main.js
+
+- create game-over screen
+	- implement html and css for design and layout
+	 	- adding restart button
+	 	- adding back to start button
+		- adding and displaying images
+
+
+
+- create winning screen
+		- implement html and css for design and layout
+	 	- adding restart button
+	 	- adding back to start button
+		- adding and displaying images
 
 
 ## Additional Links
 
 
 ### Trello
-[Link url](https://trello.com)
+https://trello.com/b/ns0mrfkd/project-gothy
 
 
 ### Slides
