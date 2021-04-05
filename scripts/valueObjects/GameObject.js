@@ -1,4 +1,4 @@
-class GameOBject{
+class GameObject{
     constructor(){
         this.img = '';
         this.posX = 0;
