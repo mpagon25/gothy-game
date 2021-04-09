@@ -1,5 +1,5 @@
 class Frame extends GameObject{
-    constructor(){
-        super();
+    constructor(img, x, y){
+        super(img, x, y);
     }
 }
