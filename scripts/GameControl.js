@@ -156,8 +156,7 @@ class GameControl{
         if(player.y < 0 ){
             player.y = 0;
 
-        }
-        
+        }        
         if(( player.x + player.width > ctx.canvas.width - 150 ) ){ 
           
               
@@ -173,6 +172,17 @@ class GameControl{
             
 
         }
+
+        // let py1 = player.y;
+        // let py2 = py1. player.height;
+        
+        // for(let i = 0; i < lvl.bugs.length; i++){
+        //     if(py2 - lvl.bugs[i].y){
+
+        //     }
+
+
+        // }
 
 
     }

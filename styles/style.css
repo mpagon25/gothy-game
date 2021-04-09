@@ -3,3 +3,25 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+canvas{
+    display: none;
+
+}
+
+#splashScreen{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;    
+    justify-content: center;
+    width: 900px;
+    height: 450px;
+    background-image: url('../img/Start_Screen_1.png');
+}
+
+#start {
+
+
+    margin-bottom: 5%;
+}
+

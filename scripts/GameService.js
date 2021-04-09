@@ -1,6 +1,7 @@
 let canvas = document.querySelector('canvas');
 let resBtn = document.querySelector('#restart');
 let startBtn = document.querySelector('#start');
+let splash = document.querySelector('#splashScreen')
 // image sources
 let backG = new Image();
 backG.src = '../img/Gotham_Skyline_Backdrop_hell.png ';
@@ -148,20 +149,41 @@ function main(){
 
 
 window.addEventListener('load', ()=>{
-    startBtn.style.display = 'none';
+
     resBtn.style.display = 'none';
 
+
+    startBtn.addEventListener('click',()=>{
+        startBtn.style.display = 'none';
+        canvas.style.display = 'inline-block';
+        splash.style.display = 'none';
+
+        ctx.beginPath();
+        ctx.drawImage(lvl.img, 0, 0);
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.drawImage(lvl.frame.img, 0, 0);
+        ctx.closePath();
+
+        main();
+
+
+    })
+
+    resBtn.addEventListener('click',()=>{
+
+    })
+
+    
+    
+
+
     //begin
-    ctx.beginPath();
-    ctx.drawImage(lvl.img,0,0);
-    ctx.closePath();
-    ctx.beginPath();
-    ctx.drawImage(lvl.frame.img,0,0);
-    ctx.closePath();
+
 
 
     // run();
-    main();
+    
 });
 
 
