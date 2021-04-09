@@ -139,6 +139,8 @@ function main(){
 
 
         bat.y += 1.5;    
+    }else{
+        
     }
     
     
