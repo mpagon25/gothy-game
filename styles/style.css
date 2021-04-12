@@ -17,12 +17,29 @@ canvas{
     justify-content: center;
     width: 900px;
     height: 450px;
-    background-image: url('../img/Start_Screen_1.png');
+    background-image: url('../img/gamescreen/SplashScreen.png');
+}
+
+#gameOverScreen{
+
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;    
+    justify-content: center;
+    width: 900px;
+    height: 450px;
+    background-image: url('../img/gamescreen/Game_Over.png');
+
 }
 
 #start {
 
 
     margin-bottom: 5%;
+}
+
+#restart{
+    margin-bottom: 5%;
+
 }
 
