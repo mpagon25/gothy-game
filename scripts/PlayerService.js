@@ -3,6 +3,11 @@ class PlayerService{
         this.drawer = new Draw();
     }
 
+    addPlayer(){
+        let newPlayer = new Player(0,0, ImageLoader.getImage('pLeft'), ImageLoader.getImage('pRight'));
+        return newPlayer;
+    }
+
 
     turnLeft(player, game){
         player.looksRight = false;
