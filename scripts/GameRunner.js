@@ -31,7 +31,7 @@ let gameLvl = new Level( backG, frame );
 let player = new Player( 5, canvas.height/2 - plImgRight.width/2, plImgLeft, plImgRight);
 
 let game = new Game(gameLvl, player, 3, ctx);
-let pCntrl = new PlayerControl();
+let pCntrl = new PlayerService();
 
 
 // set start screen

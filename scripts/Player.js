@@ -1,9 +1,9 @@
 class Player{
-    constructor(startX, startY, leftImage, rightImage ){
+    constructor( startX, startY, leftImage, rightImage ){
         this._posX = startX;
         this._posY = startY;
-        this._currentImg = rightImage;
-        this._looksRight = true;
+        this.currentImg = rightImage;
+        this._isLookingFwrd = true;
         this.leftImg = leftImage;
         this.rightImg = rightImage;
         this._width = this.rightImg.width;
@@ -27,18 +27,19 @@ class Player{
     }
 
     set img( img ){
-        this._currentImg = img;
+        this.currentImg = img;
     }
 
     get img(){
-        return this._currentImg;
+        return this.currentImg;
     }
 
-    set looksRight( bool ){
-        this._looksRight = bool;
+    set isLookingFwrd( bool ){
+        this._isLookingFwrd = bool;
     }
-    get looksRight (){
-        return this._looksRight;
+    
+    get isLookingFwrd (){
+        return this._isLookingFwrd;
     }
 
     get width(){

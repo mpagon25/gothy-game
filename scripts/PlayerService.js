@@ -1,4 +1,4 @@
-class PlayerControl{
+class PlayerService{
     constructor(){
         this.drawer = new Draw();
     }

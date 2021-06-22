@@ -1,7 +1,8 @@
 class Game{
     constructor(level, player, life, ctx){
         this.lvl = level;
-        this.player = player;
+        this.player = null;
+        this.plService = null;
         this.score = 0;
         this.attempts = life; 
         this.obstacles = [];
