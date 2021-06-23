@@ -12,7 +12,7 @@ class GameMap{
         return this._backG;
     }
 
-    set frame( _rame ){
+    set frame( frame ){
         this._frame = frame;
     }
 
