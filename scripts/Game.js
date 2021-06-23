@@ -14,7 +14,11 @@ class Game{
     }
 
     initGame( ){
+        let plServ = new PlayerService();
+        let gameMapServ = new GameMapService();
+        let bugServ = new BugService();
 
+        this.player = plServ.addPlayer();
 
     }
 
