@@ -12,7 +12,6 @@ body {
 #splashScreen {
   display: flex;
   height: 450px;
-  max-height: 450px;
   width: 900px;
   background-image: url('../img/gamescreen/SplashScreen.png');
 }
@@ -23,4 +22,16 @@ body {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 30px;
+}
+
+#playground {
+  display: none;
+  background-color: #ffffff;
+}
+
+#gameOverScreen {
+  display: none;
+  height: 450px;
+  width: 900px;
+  background-image: url('../img/gamescreen/SplashScreen.png');
 }
