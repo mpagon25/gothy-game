@@ -1,6 +1,5 @@
 class DrawService {
   drawScene(game) {
-    console.log(game);
     game.ctx.clearRect(0, 0, game.ctx.canvas.width, game.ctx.canvas.height);
 
     game.ctx.beginPath();

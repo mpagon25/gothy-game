@@ -9,6 +9,7 @@ class Player {
     this._width = this.rightImg.width;
     this._height = this.rightImg.height;
   }
+  //
 
   set posX(x) {
     this._posX = x;

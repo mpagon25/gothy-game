@@ -28,4 +28,12 @@ class GameController {
     );
     return newGame;
   }
+
+  moveMapForward = (gameMap) => {
+    this.mapService.moveMapForward(gameMap);
+  };
+
+  playerGravity = (player) => {
+    this.playerService.moveDown(player);
+  };
 }

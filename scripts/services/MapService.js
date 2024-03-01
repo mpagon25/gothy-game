@@ -6,16 +6,11 @@ class MapService {
     return gameMap;
   }
 
-  moveMapForward(velocity, gameMap, game, player, canvas) {
-    if (
-      player.posX + player.width > canvas.width / 3 &&
-      player.posX + player.width < canvas.width
-    ) {
-      gameMap.backG.posX = game.lvl.backG.posX - velocity / 5;
-      gameMap.frame.posX = game.lvl.frame.posX - velocity;
-      for (let i = 0; i < game.bugs.length; i++) {
-        game.bugs[i].posX = game.bugs[i].posX - velocity;
-      }
-    }
+  moveMapForward(gameMap) {
+    gameMap.backG.posX = gameMap.backG.posX - 1 / 5;
+    gameMap.frame.posX = gameMap.frame.posX - 1;
+    // for (let i = 0; i < game.bugs.length; i++) {
+    //   game.bugs[i].posX = game.bugs[i].posX - velocity;
+    // }
   }
 }

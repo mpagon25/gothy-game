@@ -1,6 +1,7 @@
 class PlayerService {
   constructor() {
-    this.drawer = new DrawService();
+    // this.drawer = new DrawService();
+    this.count = 0;
   }
 
   createPlayer() {
@@ -13,51 +14,49 @@ class PlayerService {
     return newPlayer;
   }
 
-  turnLeft(player, game) {
-    player.looksRight = false;
-    player.img = player.leftImg;
-    this.drawer.drawScene(game);
-    return player;
+  turnLeft(player) {
+    player._isLookingFwrd = false;
+    this.updateLookDirection(player);
   }
 
-  turnRight(player, game) {
-    player.looksRight = true;
-    player.img = player.rightImg;
-    this.drawer.drawScene(game);
-    return player;
+  turnRight(player) {
+    player._isLookingFwrd = true;
+    this.updateLookDirection(player);
   }
 
-  moveDown(player, value) {
+  moveDown(player, value = 1) {
     player.posY = player.posY + value;
-    this.drawer.drawScene(game);
-    return player;
   }
 
-  flyAnimation() {
+  updateLookDirection = (player) => {
+    if (!player._isLookingFwrd) {
+      player.currentImg = player.leftImg;
+    } else {
+      player.currentImg = player.rightImg;
+    }
+  };
+
+  flyAnimation(player) {
     if (this.count > 0) {
-      this.intervalId = requestAnimationFrame(this.flyAnimation.bind(this));
-
-      ////////
-
-      if (this.game.player.looksRight == true) {
-        this.game.player.posX = this.game.player.posX + 7;
-        this.game.player.posY = this.game.player.posY - 5;
+      this.intervalId = requestAnimationFrame(this.flyAnimation.bind(player));
+      if (player._isLookingFwrd == true) {
+        player.posX = player.posX + 14;
+        player.posY = player.posY - 20;
       } else {
-        this.game.player.posX = this.game.player.posX - 7;
-        this.game.player.posY = this.game.player.posY - 5;
+        player.posX = player.posX - 14;
+        player.posY = player.posY - 20;
       }
-      this.playerBugCollision(this.game.player, this.game.bugs);
-      this.drawer.drawScene(this.game);
+      // this.playerBugCollision(game.player, game.bugs);
+      // this.drawer.drawScene(game);
       this.count--;
     } else {
       cancelAnimationFrame(this.intervalId);
     }
   }
 
-  playerFly(game) {
-    this.game = game;
+  playerFly(player) {
     this.count = 10;
-    this.flyAnimation();
+    this.flyAnimation(player);
     this.intervalId = 0;
   }
 }
