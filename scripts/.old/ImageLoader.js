@@ -12,7 +12,7 @@ class ImageLoader {
         img.src = '../img/backgrounds/Gotham-BackGround.png';
         break;
       case 'frame':
-        img.src = '../img/frames/FrameWood.png';
+        img.src = '../img/frames/FrameWood.‚png';
         break;
       case 'bugOne':
         img.src = '../img/bugs/Bug2.png';

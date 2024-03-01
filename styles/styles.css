@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+}
+
+#start {
+  height: 120px;
+}
+
+#splashScreen {
+  display: flex;
+  height: 450px;
+  width: 900px;
+  background-image: url('../img/gamescreen/SplashScreen.png');
+}
+
+#innerSplashScreen {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+#playground {
+  display: none;
+  background-color: #ffffff;
+}
+
+#gameOverScreen {
+  display: none;
+  height: 450px;
+  width: 900px;
+  background-image: url('../img/gamescreen/SplashScreen.png');
+}

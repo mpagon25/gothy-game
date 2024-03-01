@@ -2,42 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Bat Time Stories</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./scripts/ImageLoader.js" defer></script>
+
+    <script src="./scripts/valueObjects/StaticObject.js" defer></script>
+
+    <script src="./scripts/valueObjects/Player.js" defer></script>
+
+    <script src="./scripts/valueObjects/Frame.js" defer></script>
+    <script src="./scripts/valueObjects/Background.js" defer></script>
+    <script src="./scripts/valueObjects/GameMap.js" defer></script>
+    <script src="./scripts/valueObjects/Game.js" defer></script>
+
+    <script src="./scripts/services/PlayerService.js" defer></script>
+
+    <script src="./scripts/services/MapService.js" defer></script>
+    <script src="./scripts/services/GameService.js" defer></script>
+    <script src="./scripts/services/DrawService.js" defer></script>
+
+    <script src="./scripts/controller/GameController.js" defer></script>
+
+    <script src="./scripts/GameRunner.js" defer></script>
+    <script src="./scripts/Main.js" defer></script>
+    <title>Document</title>
   </head>
   <body>
-    <div id="splashScreen" width="900" height="450">
-      <input id="start" type="image" src="./img/buttons/ButtonStart.png" />
+    <div id="splashScreen">
+      <div id="innerSplashScreen">
+        <img id="start" src="./img/buttons/ButtonStart.png" />
+      </div>
     </div>
 
-    <canvas width="900" height="450"></canvas>
+    <canvas id="playground" width="900" height="450"></canvas>
 
-    <div id="gameOverScreen" width="900" height="450">
-      <input
-        id="restart"
-        type="image"
-        src="./img/buttons/button_restart_dark.png"
-      />
+    <div id="gameOverScreen">
+      <div id="innerSplashScreen">
+        <img id="start" src="./img/buttons/button_restart_dark.png" />
+      </div>
     </div>
-
-    <!-- classes -->
-    <script src="./scripts/ImageLoader.js"></script>
-    <script src="./scripts/StaticObject.js"></script>
-    <script src="./scripts/BackGround.js"></script>
-    <script src="./scripts/Frame.js"></script>
-    <script src="./scripts/Level.js"></script>
-    <script src="./scripts/Player.js"></script>
-    <script src="./scripts/Bug.js"></script>
-
-    <!-- logic -->
-    <script src="./scripts/Draw.js"></script>
-    <script src="./scripts/PlayerService.js"></script>
-
-    <script src="./scripts/Game.js"></script>
-
-    <!-- main -->
-    <script src="./scripts/GameRunner.js"></script>
   </body>
 </html>
