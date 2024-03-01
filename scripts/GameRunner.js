@@ -1,21 +1,21 @@
 class GameRunner {
   constructor() {
-    this.splash = document.querySelector('#splashScreen');
-    this.playground = document.querySelector('#playground');
-    this.gameOverScreen = document.querySelector('#gameOverScreen');
+    this.gameController = new GameController();
+    this.drawService = new DrawService();
+    this.game = this.gameController.createGame();
   }
 
-  initGame() {
-    this.splash.style.display = 'none';
-    this.playground.style.display = 'inline-block';
-    this.gameOverScreen.style.display = 'none';
-  }
+  init = () => {
+    this.gameController.showGameScreen();
+  };
 
-  gameOver() {
-    this.splash.style.display = 'none';
-    this.playground.style.display = 'none';
-    this.gameOverScreen.style.display = 'flex';
-  }
+  run = () => {
+    this.drawService.drawScene(this.game);
 
-  run() {}
+    let intervalId = 0;
+    if (!this.game.isGameOver) {
+      intervalId = window.requestAnimationFrame(this.run);
+      this.drawService.drawScene(this.game);
+    }
+  };
 }
