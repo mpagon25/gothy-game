@@ -1,45 +1,38 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
 }
 
-canvas{
-    display: none;
-
+canvas {
+  display: none;
 }
 
-#splashScreen{
-    display: flex;
-    flex-direction: row;
-    align-items:flex-end;    
-    justify-content: center;
-    width: 900px;
-    height: 450px;
-    background-image: url('../img/gamescreen/SplashScreen.png');
+#splashScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 900px;
+  height: 450px;
+  background-image: url('../img/gamescreen/SplashScreen.png');
 }
 
-#gameOverScreen{
-
-    display: flex;
-    flex-direction: row;
-    align-items:flex-end;    
-    justify-content: center;
-    width: 900px;
-    height: 450px;
-    background-image: url('../img/gamescreen/Game_Over.png');
-
+#gameOverScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 900px;
+  height: 450px;
+  background-image: url('../img/gamescreen/Game_Over.png');
 }
 
 #start {
-
-
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
-#restart{
-    margin-bottom: 5%;
-
+#restart {
+  margin-bottom: 5%;
 }
-
