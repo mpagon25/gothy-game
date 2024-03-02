@@ -6,7 +6,7 @@ class PlayerService {
 
   createPlayer() {
     let newPlayer = new Player(
-      5,
+      0,
       225,
       ImageLoader.getImage('pLeft'),
       ImageLoader.getImage('pRight')
@@ -25,14 +25,14 @@ class PlayerService {
   }
 
   moveDown(player, value = 1) {
-    player.posY = player.posY + value;
+    player._posY = player._posY + value;
   }
 
   updateLookDirection = (player) => {
     if (!player._isLookingFwrd) {
-      player.currentImg = player.leftImg;
+      player._currentImg = player._leftImg;
     } else {
-      player.currentImg = player.rightImg;
+      player._currentImg = player._rightImg;
     }
   };
 
@@ -40,11 +40,11 @@ class PlayerService {
     if (this.count > 0) {
       this.intervalId = requestAnimationFrame(this.flyAnimation.bind(player));
       if (player._isLookingFwrd == true) {
-        player.posX = player.posX + 14;
-        player.posY = player.posY - 20;
+        player._posX = player._posX + 14;
+        player._posY = player._posY - 20;
       } else {
-        player.posX = player.posX - 14;
-        player.posY = player.posY - 20;
+        player._posX = player._posX - 14;
+        player._posY = player._posY - 20;
       }
       // this.playerBugCollision(game.player, game.bugs);
       // this.drawer.drawScene(game);

@@ -5,7 +5,7 @@ class Game {
     this.player = player;
     this.obstacles = [];
     this.platforms = [];
-    this.bugs = [];
+    this.enemies = [];
     this.ctx = ctx;
   }
 }

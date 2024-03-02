@@ -4,29 +4,37 @@ class DrawService {
 
     game.ctx.beginPath();
     game.ctx.drawImage(
-      game.gameMap.backG.img,
-      game.gameMap.backG.posX,
-      game.gameMap.backG.posY
+      game.gameMap._backG._img,
+      game.gameMap._backG._posX,
+      game.gameMap._backG._posY
     );
     game.ctx.closePath();
 
     game.ctx.beginPath();
-    game.ctx.drawImage(game.player.img, game.player.posX, game.player.posY);
+    game.ctx.drawImage(
+      game.player._currentImg,
+      game.player._posX,
+      game.player._posY
+    );
     game.ctx.closePath();
 
-    // if (game.bugs.length > 0) {
-    //   for (let i = 0; i < game.bugs.length; i++) {
-    //     ctx.beginPath();
-    //     ctx.drawImage(game.bugs[i].img, game.bugs[i].posX, game.bugs[i].posY);
-    //     ctx.closePath();
-    //   }
-    // }
+    if (game.enemies.length > 0) {
+      for (let i = 0; i < game.enemies.length; i++) {
+        game.ctx.beginPath();
+        game.ctx.drawImage(
+          game.enemies[i]._img,
+          game.enemies[i]._posX,
+          game.enemies[i]._posY
+        );
+        game.ctx.closePath();
+      }
+    }
 
     game.ctx.beginPath();
     game.ctx.drawImage(
-      game.gameMap.frame.img,
-      game.gameMap.frame.posX,
-      game.gameMap.frame.posY
+      game.gameMap._frame._img,
+      game.gameMap._frame._posX,
+      game.gameMap._frame._posY
     );
     game.ctx.closePath();
   }

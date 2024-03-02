@@ -16,9 +16,19 @@ class GameRunner {
     let intervalId = 0;
     if (!this.game.isGameOver) {
       intervalId = window.requestAnimationFrame(this.run);
+      this.drawService.drawScene(this.game);
       this.gameController.mapService.moveMapForward(this.game.gameMap);
       this.gameController.playerService.moveDown(this.game.player);
-      this.drawService.drawScene(this.game);
+
+      if (
+        this.game.enemies.length <= 0 ||
+        this.game.enemies.slice(-1)[0]._posX <= 500
+      ) {
+        this.gameController.addEnemyToList(this.game.enemies);
+      } else if (this.game.enemies[0]._posX <= 0) {
+        this.gameController.removeEnemyFromList(this.game.enemies);
+      }
+      this.gameController.moveEnemies(this.game.enemies);
     } else {
       window.cancelAnimationFrame(intervalId);
     }
